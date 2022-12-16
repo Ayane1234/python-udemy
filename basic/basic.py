@@ -11,4 +11,13 @@ print("Hello Python") #Hello Python
 
 # 標準出力
 name = input("あなたの名前はなんですか？:")
+age = 30
 print("あなたの名前は:", name)
+
+# format関数 変数の埋め込み
+print("私の名前は = {}, 年齢は{}".format(name, age))
+
+# 複数の変数に同じ文字列を入れる
+a = b = "Hello"
+
+print(a,b)
