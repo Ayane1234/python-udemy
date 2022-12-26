@@ -18,4 +18,20 @@ fruit = ("apple", "banana", "lemon")
 print(f"fruit={fruit}") # => fruit=('apple', 'banana', 'lemon')
 print(f"fruitのタイプ={type(fruit)}") # => fruitのタイプ=<class 'tuple'>
 print(f"fruitのインデックス0番目={fruit[0]}") # => fruitのインデックス0番目=apple
-fruit[1] = "melon" # エラー文
+# fruit[1] = "melon" # エラー文 TypeError: 'tuple' object does not support item assignment
+
+#タプルに要素を追加したい場合 この場合、新しいタプルを生成している
+fruit = fruit + ("melon",)
+print(f"fruit={fruit}") # fruit=('apple', 'banana', 'lemon', 'melon')
+
+# リストをタプルに変換したい
+list_fruit = ["apple", "banana"]
+tuple_fruit = tuple(list_fruit)
+print(f"tuple_fruit={tuple_fruit}") # tuple_fruit=('apple', 'banana')
+
+#タプルを辞書型のkeyに指定する
+pos = (135, 35)
+countries = {
+    pos: "Japan"
+}
+print(countries.get((135,35))) # Japan
